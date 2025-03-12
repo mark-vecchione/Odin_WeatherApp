@@ -3,7 +3,7 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
     mode: "development",
-    entry: "./src/index.js", //INSERT ENTRY POINT FILE HERE//
+    entry: "./src/weather.js", //INSERT ENTRY POINT FILE HERE//
     output: {
         filename: "main.js", //OUTPUT FILE HERE. SHOULD ALWAYS BE MAIN.JS//
         path: path.resolve(__dirname, "dist"),
@@ -11,11 +11,11 @@ module.exports = {
     },
     devtool: "eval-source-map",
     devServer: {
-      watchFiles: ["./src/homepage.html"],  //INSERT HTML FILE HERE//
+      watchFiles: ["./src/index.html"],  //INSERT HTML FILE HERE//
     },
     plugins: [
         new HtmlWebpackPlugin({
-            template: "./src/homepage.html", //INSERT HTML FILE HERE//
+            template: "./src/index.html", //INSERT HTML FILE HERE//
         }),
     ],
     module: {
